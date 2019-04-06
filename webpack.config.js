@@ -7,9 +7,6 @@ const rules = require('./config/rules');
 const { entryPath } = require('./config/paths');
 const { inDevelopment } = require('./config/envs');
 
-// console.log(process.env);
-// process.exit(0);
-
 // =============================================================== //
 // WEBPACK CONFIGURATION                                           //
 // =============================================================== //
