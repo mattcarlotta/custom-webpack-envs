@@ -1,3 +1,4 @@
+require('dotenv').config();
 const devServer = require('./config/devServer');
 const getPlugins = require('./config/plugins');
 const optimization = require('./config/optimization');
@@ -5,6 +6,9 @@ const output = require('./config/output');
 const rules = require('./config/rules');
 const { entryPath } = require('./config/paths');
 const { inDevelopment } = require('./config/envs');
+
+// console.log(process.env);
+// process.exit(0);
 
 // =============================================================== //
 // WEBPACK CONFIGURATION                                           //

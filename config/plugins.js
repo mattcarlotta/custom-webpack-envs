@@ -1,3 +1,4 @@
+const { DefinePlugin } = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -7,6 +8,9 @@ const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const WebpackBar = require('webpackbar');
 const { cssFolder, faviconPath, templatePath } = require('./paths');
 const { inDevelopment, PORT } = require('./envs');
+
+// console.log(process.env);
+// process.exit(0);
 
 // =============================================================== //
 // WEBPACK PLUGINS                                                 //
@@ -47,6 +51,12 @@ module.exports = () => {
         notes,
       },
       clearConsole: true,
+    }),
+    new DefinePlugin({
+      'process.env': {
+        BASE_URL: JSON.stringify(process.env.BASE_URL),
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+      },
     }),
   ];
 

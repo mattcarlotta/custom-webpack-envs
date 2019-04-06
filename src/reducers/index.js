@@ -1,10 +1,10 @@
 import { reducer as formReducer } from 'redux-form';
 import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router';
-import serverReducer from './server';
+import profileReducer from './profileReducer';
 
 const reducers = {
-  server: serverReducer,
+  profile: profileReducer,
 };
 
 export default history =>

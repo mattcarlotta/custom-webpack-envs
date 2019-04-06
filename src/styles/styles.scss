@@ -22,7 +22,7 @@
   // ============================================= //
   // Example.scss                                  //
   // ============================================= //
-   @import '/relative/path/to/styles/index';
+   @import "/relative/path/to/styles/index";
 
    exampleContainer {
      @extend %centered; // (extended from _ext.scss)
@@ -33,13 +33,13 @@
   // ============================================= //
   // Example.js                                    //
   // ============================================= //
-   import React from 'react';
-   import { exampleContainer } from './Example.scss';
+   import React from "react";
+   import { exampleContainer } from "./Example.scss";
 
    const Example = () => (
      <div className={exampleContainer}>
        <h1>
-         I'm contained within the exampleContainer!
+         I"m contained within the exampleContainer!
        <h1>
      </div>
    )
@@ -47,9 +47,9 @@
    export default Example;
 */
 
-@import './variables/vars';
-@import './helpers/ext';
-@import './helpers/mixins';
-@import './base/base';
-@import './animations/anim';
-@import './components/icons';
+@import "./variables/vars";
+@import "./helpers/ext";
+@import "./helpers/mixins";
+@import "./base/base";
+@import "./animations/anim";
+@import "./components/icons";
